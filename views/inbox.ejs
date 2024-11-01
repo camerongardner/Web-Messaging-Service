@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+
+<h2>Your Inbox</h2>
+
+<% if (typeof error !== 'undefined') { %>
+    <p style="color: red;"><%= error %></p>
+<% } %>
+
+<% if (messages.length === 0) { %>
+    <p>No messages received.</p>
+<% } else { %>
+    <ul>
+        <% messages.forEach(message => { %>
+            <li>
+                <strong>From:</strong> <%= message.sender.username %><br>
+                <strong>Content:</strong> <%= message.content %><br>
+                <strong>Sent At:</strong> <%= new Date(message.timestamp).toLocaleString() %>
+            </li>
+        <% }) %>
+    </ul>
+<% } %>
+
+</div> <!-- Close container -->
+</body>
+</html>

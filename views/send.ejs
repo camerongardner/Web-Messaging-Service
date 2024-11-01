@@ -1,0 +1,27 @@
+<!-- views/send.ejs -->
+<%- include('partials/header') %>
+
+<h2>Send a Message</h2>
+
+<!-- Display success or error messages -->
+<% if (typeof success !== 'undefined') { %>
+    <p style="color: green;"><%= success %></p>
+<% } %>
+
+<% if (typeof error !== 'undefined') { %>
+    <p style="color: red;"><%= error %></p>
+<% } %>
+
+<form action="/messages/send" method="POST">
+    <label for="receiver">Receiver's Username:</label>
+    <input type="text" id="receiver" name="receiver" required>
+
+    <label for="content">Message Content:</label>
+    <textarea id="content" name="content" required></textarea>
+
+    <button type="submit">Send Message</button>
+</form>
+
+</div> <!-- Close container -->
+</body>
+</html>

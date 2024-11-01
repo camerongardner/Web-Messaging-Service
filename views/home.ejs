@@ -1,0 +1,14 @@
+<!-- views/home.ejs -->
+<%- include('partials/header') %>
+
+<h1>Welcome to the Web Messaging Service!</h1>
+
+<% if (locals.token) { %>
+    <p>You are logged in. Go to your <a href="/messages/inbox">Inbox</a> or <a href="/messages/send">Send a Message</a>.</p>
+<% } else { %>
+    <p>Please <a href="/login">Login</a> or <a href="/register">Register</a> to continue.</p>
+<% } %>
+
+</div> <!-- Close container -->
+</body>
+</html>
