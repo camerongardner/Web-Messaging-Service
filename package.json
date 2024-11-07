@@ -1,7 +1,7 @@
 {
   "name": "web-messaging-service",
   "version": "1.0.0",
-  "description": "A web applocation that provides authenticated messaging services",
+  "description": "A web application that provides authenticated messaging services",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
